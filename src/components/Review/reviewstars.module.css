@@ -1,0 +1,19 @@
+
+.stars i{
+    font-size: 2.2rem;
+    color: white;
+    padding: 0.5rem 0;
+    }
+
+
+.starIcon {
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.5rem 0.3rem;
+    cursor: pointer;
+  }
+  
+  .starIcon.selected {
+    color: gold
+  }
+  

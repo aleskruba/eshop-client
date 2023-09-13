@@ -1,0 +1,83 @@
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor:pointer;
+}
+
+.btn:hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+
+.loginForm{
+    position: absolute;
+    top: 120px; /* Move the top edge to the vertical center */
+    left: 50%; /* Move the left edge to the horizontal center */
+    transform: translateX(-50%); 
+    display: none;
+    min-width: 40rem;
+    width: 30rem;
+    max-height:70rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    text-align: center;
+}
+
+.loginForm.active{
+    display: block;
+    min-width: 50rem;
+    width: 40rem;
+    max-height:70rem;
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.loginFormH3{
+    font-size:1.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.inputBox{
+    width: 100%;
+    margin: .7rem 0;
+    background: #eee;
+    border-radius: .5rem ;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.inputBoxPtag{
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+
+.inputBoxAtag{
+    color: var(--orange);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.notSuccess{
+    color: red;
+    font-size: 15px;
+}

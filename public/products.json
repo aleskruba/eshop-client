@@ -1,0 +1,155 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "iPhone 12",
+        "price": 120,
+        "amount": 20,
+        "image": "iphone12.jpg",
+        "title": "The iPhone 12 display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less)",
+        "description": "Super Retina XDR display<br>6.1‑inch (diagonal) all‑screen OLED display<br>2532‑by‑1170-pixel resolution at 460 ppi<br>HDR display<br>True Tone<br>Wide color (P3)<br>Haptic Touch<br>2,000,000:1 contrast ratio (typical)<br>625 nits max brightness (typical); 1200 nits peak brightness (HDR)<br>Fingerprint-resistant oleophobic coating<br>Support for display of multiple languages and characters simultaneously",
+        "descount":true
+      },
+      {
+        "id": 2,
+        "name": "iPhone 13",
+        "price": 140,
+        "amount": 15,
+        "image": "iphone13.jpg",
+        "title": "The iPhone 13 display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less)",
+        "description": "Super Retina XDR display<br>6.1‑inch (diagonal) all‑screen OLED display<br>2532‑by‑1170-pixel resolution at 460 ppi<br>HDR display<br>True Tone<br>Wide color (P3)<br>Haptic Touch<br>2,000,000:1 contrast ratio (typical)<br>625 nits max brightness (typical); 1200 nits peak brightness (HDR)<br>Fingerprint-resistant oleophobic coating<br>Support for display of multiple languages and characters simultaneously",
+        "descount":false
+      },
+      {
+        "id": 3,
+        "name": "iPhone 14",
+        "price": 160,
+        "amount": 13,
+        "image": "iphone14.jpg",
+        "title": "The iPhone 14 display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less)",
+        "description": "Super Retina XDR display<br>6.1‑inch (diagonal) all‑screen OLED display<br>2532‑by‑1170-pixel resolution at 460 ppi<br>HDR display<br>True Tone<br>Wide color (P3)<br>Haptic Touch<br>2,000,000:1 contrast ratio (typical)<br>625 nits max brightness (typical); 1200 nits peak brightness (HDR)<br>Fingerprint-resistant oleophobic coating<br>Support for display of multiple languages and characters simultaneously",
+        "descount":false
+      },
+      {
+        "id": 4,
+        "name": "Samsung Galaxy S21",
+        "price": 900,
+        "amount": 2,
+        "image": "samsung.jpg",
+        "title": "The Samsung Galaxy S21 features a stunning AMOLED display, powerful performance, and a versatile camera system.",
+        "description": "Dynamic AMOLED 2X display<br>6.2-inch (diagonal) all-screen display<br>2400 x 1080-pixel resolution at 421 ppi<br>HDR10+ support<br>Adaptive refresh rate up to 120Hz<br>Exynos/Snapdragon chipset<br>12GB RAM<br>Triple camera system with ultrawide and telephoto lenses<br>8K video recording<br>4500mAh battery<br>5G connectivity",
+        "descount":true
+      },
+      {
+        "id": 5,
+        "name": "Google Pixel 6",
+        "price": 699,
+        "amount": 8,
+        "image": "pixel6.jpg",
+        "title": "The Google Pixel 6 offers a clean Android experience and top-notch camera capabilities.",
+        "description": "OLED display<br>6.4-inch (diagonal) display<br>2400 x 1080-pixel resolution at 411 ppi<br>Adaptive refresh rate up to 120Hz<br>Google Tensor chipset<br>8GB RAM<br>Dual camera system with AI enhancements<br>Night Sight, Super Res Zoom, and HDR+ enhanced<br>4000mAh battery<br>5G connectivity",
+        "descount":false
+      },
+      {
+        "id": 6,
+        "name": "OnePlus 9 Pro",
+        "price": 999,
+        "amount": 1,
+        "image": "oneplus9pro.jpg",
+        "title": "The OnePlus 9 Pro combines powerful performance with a high-refresh-rate display and Hasselblad-tuned cameras.",
+        "description": "Fluid AMOLED display<br>6.7-inch (diagonal) display<br>3216 x 1440-pixel resolution at 525 ppi<br>120Hz refresh rate<br>Qualcomm Snapdragon 888 chipset<br>12GB RAM<br>Quad camera system co-developed with Hasselblad<br>8K video recording<br>4500mAh battery<br>5G connectivity",
+        "descount":false
+      },
+      {
+        "id": 7,
+        "name": "Xiaomi Mi 11",
+        "price": 799,
+        "amount": 13,
+        "image": "mi11.jpg",
+        "title": "The Xiaomi Mi 11 offers high-end specifications and a vibrant display at a competitive price.",
+        "description": "AMOLED display<br>6.81-inch (diagonal) display<br>3200 x 1440-pixel resolution at 515 ppi<br>120Hz refresh rate<br>Qualcomm Snapdragon 888 chipset<br>8GB RAM<br>Triple camera system with wide, ultrawide, and macro lenses<br>8K video recording<br>4600mAh battery<br>5G connectivity",
+        "descount":false
+      },
+      {
+        "id": 8,
+        "name": "Sony Xperia 1 III",
+        "price": 1099,
+        "amount": 25,
+        "image": "xperia1iii.jpg",
+        "title": "The Sony Xperia 1 III features a 4K OLED display, versatile camera system, and emphasis on multimedia.",
+        "description": "4K OLED display<br>6.5-inch (diagonal) display<br>3840 x 1644-pixel resolution<br>120Hz refresh rate<br>Qualcomm Snapdragon 888 chipset<br>12GB RAM<br>Triple camera system with ZEISS optics<br>4K HDR video recording<br>4500mAh battery<br>5G connectivity",
+        "descount":false
+      },
+      {
+        "id": 9,
+        "name": "Huawei P50 Pro",
+        "price": 1199,
+        "amount": 38,
+        "image": "p50pro.jpg",
+        "title": "The Huawei P50 Pro offers advanced camera capabilities and a stylish design.",
+        "description": "OLED display<br>6.6-inch (diagonal) display<br>2700 x 1228-pixel resolution<br>120Hz refresh rate<br>Huawei Kirin 9000 chipset<br>8GB RAM<br>Penta camera system",
+        "descount":true
+      },
+      {
+        "id": 10,
+        "name": "Huawei P50 Pro",
+        "price": 1199,
+        "amount": 59,
+        "image": "p50pro.jpg",
+        "title": "The Huawei P50 Pro offers advanced camera capabilities and a stylish design.",
+        "description": "OLED display<br>6.6-inch (diagonal) display<br>2700 x 1228-pixel resolution<br>120Hz refresh rate<br>Huawei Kirin 9000 chipset<br>8GB RAM<br>Penta camera system co-engineered with Leica<br>4K video recording<br>4200mAh battery<br>5G connectivity",
+        "descount":false
+      },
+      {
+        "id": 11,
+        "name": "LG Velvet 2 Pro",
+        "price": 899,
+        "amount": 100,
+        "image": "lgvelvet2pro.jpg",
+        "title": "The LG Velvet 2 Pro features a sleek design, a dual-screen accessory, and capable cameras.",
+        "description": "OLED display<br>6.8-inch (diagonal) display<br>2460 x 1080-pixel resolution<br>90Hz refresh rate<br>Qualcomm Snapdragon 888 chipset<br>8GB RAM<br>Triple camera system with ultrawide and depth sensors<br>4K video recording<br>4300mAh battery<br>5G connectivity",
+        "descount":false
+      },
+      {
+        "id": 12,
+        "name": "Motorola Edge 20 Pro",
+        "price": 699,
+        "amount": 80,
+        "image": "edge20pro.jpg",
+        "title": "The Motorola Edge 20 Pro offers a smooth display, a versatile camera setup, and close-to-stock Android experience.",
+        "description": "AMOLED display<br>6.7-inch (diagonal) display<br>2400 x 1080-pixel resolution<br>144Hz refresh rate<br>Qualcomm Snapdragon 870 chipset<br>8GB RAM<br>Triple camera system with ultra high-resolution main sensor<br>4K video recording<br>4500mAh battery<br>5G connectivity",
+        "descount":false
+      },
+      {
+        "id": 13,
+        "name": "Nokia X20",
+        "price": 349,
+        "amount": 70,
+        "image": "nokiax20.jpg",
+        "title": "The Nokia X20 offers a clean Android experience, reliable performance, and long-lasting battery life.",
+        "description": "LCD display<br>6.67-inch (diagonal) display<br>2400 x 1080-pixel resolution<br>60Hz refresh rate<br>Qualcomm Snapdragon 480 chipset<br>6GB RAM<br>Quad camera system with ZEISS optics<br>4K video recording<br>4470mAh battery<br>5G connectivity",
+        "descount":false
+      },
+      {
+        "id": 14,
+        "name": "Asus ROG Phone 5",
+        "price": 1099,
+        "amount": 60,
+        "image": "rogphone5.jpg",
+        "title": "The Asus ROG Phone 5 offers top-notch gaming performance, a high-refresh-rate display, and dedicated gaming features.",
+        "description": "AMOLED display<br>6.78-inch (diagonal) display<br>2448 x 1080-pixel resolution<br>144Hz refresh rate<br>Qualcomm Snapdragon 888 chipset<br>16GB RAM<br>Triple camera system with ultrawide and macro lenses<br>8K video recording<br>6000mAh battery<br>5G connectivity",
+        "descount":false
+      },
+      {
+        "id": 15,
+        "name": "Oppo Find X4 Pro",
+        "price": 1099,
+        "amount": 20,
+        "image": "findx4pro.jpg",
+        "title": "The Oppo Find X4 Pro offers a stunning display, versatile camera capabilities, and fast charging.",
+        "description": "AMOLED display<br>6.7-inch (diagonal) display<br>3200 x 1440-pixel resolution<br>120Hz refresh rate<br>Qualcomm Snapdragon 888 chipset<br>12GB RAM<br>Quad camera system with Sony IMX800 sensor<br>8K video recording<br>4500mAh battery<br>5G connectivity",
+        "descount":false
+      }
+    ]
+  }
+  

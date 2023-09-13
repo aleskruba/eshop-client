@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Cormorant+SC:wght@500&family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+
+.orderMainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.orderMainDIV{
+    
+    margin-top: 10px;
+    background-color: white;
+    width: 600px;
+}
+
+.orderMainDIVTOP{
+    padding-left: 20px;
+    border-bottom: 1px dotted black;
+    padding-bottom: 20px;
+}
+
+.orderMainDIVTOPtext{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.orderMainDIVTOPdate{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.basket{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+
+  }
+.basketTop{
+
+display: flex;
+justify-content: space-between;
+width: 600px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.desciption{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid black;
+}
+.name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.image{
+    height: 30px;
+    margin-left: 50px;
+}
+
+.price{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.quantity{
+    margin-left: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+  
+}
+
+.summary{
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: bisque;
+    width: 600px;
+    height: 170px;
+}
+
+.shipment{
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.pieces{
+
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.priceTAX{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+.totalPrice{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.buttons{
+    margin-top: 10px;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnInvoice{
+    border-radius: 10px;
+    width: 80px;
+    height: 20px;
+    background-color: darkblue;
+    color: white;
+}
+
+.btnInvoice:hover{
+    width: 80px;
+    height: 20px;
+    background-color: blue;
+    color: white;
+}
+
+.btnBack{
+    border-radius: 10px;
+    width: 80px;
+    height: 20px;
+    background-color: gray;
+    color: white;
+}
+
+.btnBack:hover{
+    width: 80px;
+    height: 20px;
+    background-color: lightgray;
+    color: black;
+}
+
+@media (max-width:768px){
+
+    .orderMainDIV{
+        width: 400px;
+     
+    }
+
+    .basketTop{
+        width: 380px;
+           }
+    
+    .desciption{
+        width: 380px;
+    }
+    .summary{
+        width: 400px;
+    }
+
+}

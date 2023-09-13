@@ -1,0 +1,157 @@
+section{
+    padding: 2rem 9%;
+}
+
+.offer{
+
+}
+
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: black;
+
+}
+
+.span{
+    background: var(--orange);
+    color: #fff;
+    display: inline-block;
+    padding: 5rem 3rem;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
+}
+
+.btn {
+    margin-top: 0.5rem;
+    width: 150px;
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border: .2rem solid black;
+    color: black;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+.btn2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* This centers the element horizontally */
+    bottom: 10px;
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border: .2rem solid black;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+.btn2:hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+.BoxImageDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: auto;
+}
+
+.BoxImage{
+object-fit: fill;
+}
+
+.box{
+    max-height: 580px;
+    height: 580px;
+    background-color:#fff ;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: -1rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+
+.box:hover{
+    outline-offset: -0.5rem;
+    outline: var(--outline-hover);
+}
+
+.productSlider{
+    padding: 1rem;
+}
+
+
+.productSlider:first-child{
+    padding: 2rem;
+}
+
+.BoxH3{
+    text-align: justify;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.BoxP{
+    text-align: left;
+}
+
+.price{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: .0 0;
+}
+
+
+
+.stars{
+}
+
+.stars i{
+font-size: 1.2rem;
+color: var(--orange);
+padding: 0.5rem 0;
+}
+
+
+@media (max-width:768px){
+
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    .box{
+        width: 300px;
+    }
+.BoxImageDiv{
+
+    height: 250px;
+
+}
+}
+
+@media (max-width:450px){
+
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    .box{
+        width: 300px;
+    }
+}

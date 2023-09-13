@@ -1,0 +1,65 @@
+
+.textareaContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .textareaLabel {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .textareaField {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    width: 320px;
+    min-height: 100px; /* Set a minimum height for the textarea */
+  }
+  
+  .error {
+    color: red;
+    margin-top: 4px;
+  }
+  
+  .formDiv{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap:20px
+  }
+
+  .inputButton{
+    background-color: lightgreen;
+    height: 25px;
+    border-radius: 5px;
+    width: 80px;
+    font-size: 15px;
+
+  }
+
+  .inputButton:hover{
+    background-color: green;
+    color: #eee;
+   
+  }
+
+  .success{
+    color: green;
+    font-size: 16px;
+  }
+
+  .backendError{
+    color: red;
+    font-size: 16px;
+  }
+
+  .missingStartsRanking{
+    color: red;
+    font-size: 16px;
+   }

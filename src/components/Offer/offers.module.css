@@ -1,0 +1,70 @@
+section{
+    padding: 2rem 9%;
+}
+
+a {
+    text-decoration: none; /* Remove underlines */
+    color: inherit; /* Inherit color from parent */
+  }
+  
+  /* Apply styles for different link states */
+  a:link,
+  a:visited {
+    color: inherit; /* Inherit color from parent */
+  }
+  
+
+
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: black;
+
+}
+
+.span{
+    background: var(--orange);
+    color: #fff;
+    display: inline-block;
+    padding: 5rem 3rem;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid black;
+    color: black;
+    cursor:pointer;
+    margin-bottom: 20px;
+}
+
+.btn:hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+.BoxImage{
+height: 300px;
+}
+
+.box{
+margin-bottom: 20px;
+border-bottom: 1px solid black;
+}
+.stockAmount{
+    margin-left: 25px;
+    font-weight: 200;
+    font-size: 12px;
+}
+@media (max-width:450px){
+
+    .heading{
+        font-size: 2.5rem;
+    }
+}

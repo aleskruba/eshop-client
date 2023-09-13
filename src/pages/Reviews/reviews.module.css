@@ -1,0 +1,64 @@
+
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: black;
+
+}
+
+.BoxImageDiv{
+    width: 150px;
+    height: 150px;
+    }
+    
+
+.BoxImage{
+padding: 20px;
+height: 100%;
+width: 100%;
+object-fit: cover;
+border-radius: 50%;
+}
+
+.comments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+
+    font-weight: 900;
+    font-size: 11px;
+}
+
+.message{
+margin-top: 5px;
+font-style: italic;
+}
+
+.date{
+   
+    font-weight: 900;
+}
+.stars i{
+    font-size: 1.2rem;
+    color: lightgray;
+    padding: 0.5rem 0;
+    }
+
+.starIcon {
+    font-size: 1.2rem;
+    color: lightgray;
+    padding: 0.5rem 0.3rem;
+    cursor: pointer;
+    }
+    
+    .starIcon.selected {
+    color: gold
+    }
+
+      
+   

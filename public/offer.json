@@ -1,0 +1,30 @@
+
+{
+    "offers": [
+        {   "id":1,
+            "name": "iphone12",
+            "price": 120,
+            "image": "iphone12.jpg",
+            "title": "The iPhone 12 display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less)",
+            "description": "Super Retina XDR display<br>6.1‑inch (diagonal) all‑screen OLED display<br>2532‑by‑1170-pixel resolution at 460 ppi<br>HDR display<br>True Tone<br>Wide color (P3)<br>Haptic Touch<br>2,000,000:1 contrast ratio (typical)<br>625 nits max brightness (typical); 1200 nits peak brightness (HDR)<br>Fingerprint-resistant oleophobic coating<br>Support for display of multiple languages and characters simultaneously"
+        },
+        {
+            "id":2,
+            "name": "iphone13",
+            "price": 140,
+            "image": "iphone13.jpg",
+            "title": "The iPhone 12 display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less)",
+            "description": "Super Retina XDR display<br>6.1‑inch (diagonal) all‑screen OLED display<br>2532‑by‑1170-pixel resolution at 460 ppi<br>HDR display<br>True Tone<br>Wide color (P3)<br>Haptic Touch<br>2,000,000:1 contrast ratio (typical)<br>625 nits max brightness (typical); 1200 nits peak brightness (HDR)<br>Fingerprint-resistant oleophobic coating<br>Support for display of multiple languages and characters simultaneously"
+        },
+        {   "id":3,
+            "name": "iphone14",
+            "price": 160,
+            "image": "iphone14.jpg",
+            "title": "The iPhone 12 display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less)",
+            "description": "Super Retina XDR display<br>6.1‑inch (diagonal) all‑screen OLED display<br>2532‑by‑1170-pixel resolution at 460 ppi<br>HDR display<br>True Tone<br>Wide color (P3)<br>Haptic Touch<br>2,000,000:1 contrast ratio (typical)<br>625 nits max brightness (typical); 1200 nits peak brightness (HDR)<br>Fingerprint-resistant oleophobic coating<br>Support for display of multiple languages and characters simultaneously"
+        }
+
+    ]
+}
+    
+

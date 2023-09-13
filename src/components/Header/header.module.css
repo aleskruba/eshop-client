@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Cormorant+SC:wght@500&family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Sonsie+One&display=swap');
+
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-);
+   }
+  
+   .headerNoAction{
+    pointer-events: none;
+    opacity: 30%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-);
+   }
+
+    .logo{
+        font-size: 2.5rem;
+        font-weight: bolder;
+        color: var(--black);
+    }
+
+    .logo i{
+        color:var(--orange);
+    }
+
+    .adminTitle{
+        font-family: 'Sonsie One', cursive;
+        font-size: 14px;
+        color: purple;
+    }
+
+    .navbar a{
+        font-size: 1.7rem;
+        margin: 0 1rem;
+        color:var(--black);
+    }
+
+    .navbar a:hover{
+        color:var(--orange);
+    }
+
+    .icons div{
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        border-radius: .5rem;
+        background: #eee;
+        color: var(--black);
+        font-size: 2rem;
+        margin-right: .3rem;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .iconsnotactive div{
+        opacity: 50%;
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        border-radius: .5rem;
+        background: #eee;
+        color: var(--black);
+        font-size: 2rem;
+        margin-right: .3rem;
+        text-align: center;
+        cursor: pointer;
+        pointer-events: none;
+    }
+
+    #bars{
+        display: none;
+    }
+
+    .icons div:hover{
+        background: var(--orange);
+        color: #fff;
+    }
+
+    #menubtn{
+        display: none;
+    }
+
+
+
+    .searchForm.active{
+        position: absolute;
+        top:110%;
+        right:2rem;
+        width: 50rem;
+        height: 5rem;
+        background: #fff;
+        border-radius: .5rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        box-shadow: var(--box-shadow);
+       }
+
+    .searchForm{
+        position: absolute;
+        top:110%;
+        display: none;
+        width: 50rem;
+        height: 5rem;
+        background: #fff;
+        border-radius: .5rem;
+        overflow: hidden;
+        align-items: center;
+        box-shadow: var(--box-shadow);
+        }
+
+.searchFormInput{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+#searchFormLabel{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+#searchFormLabel:hover{
+    color: var(--orange);
+}
+
+
+.shoppingCart{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 400px;
+    max-height: 80vh; /* Set a maximum height for the cart */
+    background: #fff;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-bottom: 100px;
+}
+
+.shoppingCart.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+
+.box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.images{
+    height: 10rem;
+
+}
+
+#trash{
+    font-size: 2rem;
+    position: absolute;
+    top:60%;
+    right: 1rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translate(-50%);
+}
+
+#trash:hover{
+    color: var(--orange);
+}
+
+.contentH3{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.price{
+    color:var(--light-color);
+    font-size: 1.6rem;
+
+}
+
+.quantity{
+padding-left: 1rem;
+}
+
+.total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor:pointer;
+}
+
+.btn:hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+.cancelBtn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor:pointer;
+}
+
+
+.cancelBtn:hover{
+    background: gray;
+    color: #fff;
+}
+
+.cancelBtn {
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+#cartBtn{
+    position: relative;
+}
+
+#amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+
+}
+
+#amountSpan{
+    font-size: 12px;
+}
+
+.shipmentNotice{
+    text-align: center;
+       color: red;
+    font-size: 15px;
+}
+  
+.checkboxes{
+    display: flex;
+    justify-content: space-around;
+    position: relative
+}
+
+.checkbox1{
+   pointer-events: none;
+
+}
+
+
+.checkbox2{
+    pointer-events: none;
+ 
+}
+  /* Style for the text */
+  .checkBoxText {
+    margin-right: 10px; /* Add some spacing between text and checkbox */
+  }
+  
+  /* Style for the checkbox */
+  .checkBox {
+    /* Customize the checkbox appearance */
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333; /* Border color */
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  
+    /* Create a custom checkmark using the ::before pseudo-element */
+    &::before {
+      content: '\2713'; /* Unicode checkmark symbol */
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 18px; /* Center the checkmark vertically */
+      color: #333; /* Checkmark color */
+      font-size: 12px; /* Adjust the checkmark size */
+      opacity: 0; /* Initially hidden */
+    }
+  
+    /* Checked state (when the checkbox is clicked) */
+    &:checked::before {
+      opacity: 1; /* Show the checkmark when checked */
+    }
+  }
+  
+  .checkBoxActive {
+    /* Customize the checkbox appearance */
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333; /* Border color */
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  
+    /* Create a custom checkmark using the ::before pseudo-element */
+    &::before {
+      content: '\2713'; /* Unicode checkmark symbol */
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 18px; /* Center the checkmark vertically */
+      color: #333; /* Checkmark color */
+      background-color: aqua;
+      font-size: 12px; /* Adjust the checkmark size */
+      opacity: 0; /* Initially hidden */
+    }
+  
+    /* Checked state (when the checkbox is clicked) */
+    &:checked::before {
+      opacity: 1; /* Show the checkmark when checked */
+    }
+  }
+
+
+
+  .summaryWindow {
+    display: flex;
+    justify-content: center;
+    position: absolute;  
+    overflow: hidden;
+    width: 650px;
+    height: 500px; /* Set a fixed height */
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: aqua;
+  /* Position it within the container */
+}
+
+.btnPay{
+    border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  background-color: darkorange;
+}
+.btnPay:hover{
+  background-color: orange;
+}
+.btnCancel{
+    border-radius: 5px;
+   width: 100px;
+   height: 30px;
+   background-color: gray;
+   color: white;
+}
+
+.btnCancel:hover{
+    background-color: rgb(120, 116, 116);
+    color: black;
+  }
+
+@media (max-width:991px){
+    .header{
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    
+  .summaryWindow {
+    width: 650px;
+
+}
+
+    #menubtn{
+        display: inline-block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 93%;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+    }
+
+    .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+
+    .navbar.active{
+           right: 2rem;
+           transition: .4s linear;
+ 
+    }
+    #bars{
+        display: inline-block;
+    }
+
+    .searchForm{
+        width: 90%;
+    }
+
+}
+
+@media (max-width:450px){
+
+    .header{
+        font-size: 50%;
+    }
+
+}

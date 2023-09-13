@@ -1,0 +1,75 @@
+.homeMainDiv{
+    position: absolute;
+    height: 100vh;
+    opacity: 10%;
+    pointer-events: none; 
+    position: fixed;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    padding: 2rem 9%;
+}
+
+.BoxImage{
+    height: 300px;
+    max-width: 300px;
+    }
+
+.imageCart{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid black;
+    color: black;
+    cursor:pointer;
+    margin-bottom: 20px;
+}
+
+.btn:hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+.cart{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-start;
+    gap:20px
+}
+
+@media (max-width:991px){
+    
+}
+
+@media (max-width:768px){
+    .imageCart{
+        flex-direction: column;
+     }
+     .cart{
+        margin-left: 0px;
+    }
+
+}
+@media (max-width:450px){
+
+
+}

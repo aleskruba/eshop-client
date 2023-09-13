@@ -1,0 +1,119 @@
+
+ @media print {
+
+} 
+
+
+
+.invoiceContainer {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  .header{
+    margin-left: 30px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .customer{
+    display: flex;
+    gap:20px;
+  }
+
+  .customerDetails{
+    font-weight: 900;
+  }
+
+  .invoiceHeader {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .invoiceDetails {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .invoiceInfo {
+    margin-bottom: 20px;
+  }
+  
+  .invoiceItems {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .invoiceItem {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  .itemName {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .itemImage {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 5px 0;
+  }
+  
+  .itemDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .itemPrice {
+    margin-bottom: 5px;
+  }
+  
+  .itemQuantity {
+    color: #888;
+  }
+  
+  .invoiceSummary {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .summaryRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .summaryLabel {
+    font-weight: bold;
+  }
+  
+  .summaryValue {
+    font-weight: bold;
+  }
+  
+  .printButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .printButton:hover {
+    background-color: #0056b3;
+  }
+
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+  }
+  

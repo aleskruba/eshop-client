@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Cormorant+SC:wght@500&family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+.summaryMainDiv{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+}
+
+.summaryDiv{
+    margin-top: 30px;
+    width: 500px;
+    display: flex;
+
+}
+
+.summary{
+width: 100%;
+font-size: 14px;
+}
+
+.summaryDate{
+  font-size: 14px;
+ 
+}
+
+.summaryProduct{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summaryProductDetails{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summaryProductDetailsPrice{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shipment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted black;
+}
+
+.amount{
+ 
+    border-top: 1px dotted black;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.price{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 900;
+}
+
+.priceTAX{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+}
+
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnPay{
+    border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  background-color: darkorange;
+}
+.btnPay:hover{
+  background-color: orange;
+}
+.btnCancel{
+    border-radius: 5px;
+   width: 100px;
+   height: 30px;
+   background-color: gray;
+   color: white;
+}
+
+.btnCancel:hover{
+    background-color: rgb(120, 116, 116);
+    color: black;
+  }
+
+@media (max-width:768px){
+
+    .summaryDiv{
+        width: 380px;
+  
+    
+    }
+}
