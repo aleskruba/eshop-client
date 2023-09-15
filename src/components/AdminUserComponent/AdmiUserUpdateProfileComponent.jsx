@@ -57,6 +57,7 @@ function AdmiUserUpdateProfileComponent({cancelFunction,
       };
 
       const response = await axios.put(url, data, config);
+   
             if (response.request.status === 200) {
               const updatedUser = { ...user, ...changedFields };
               setUser(updatedUser); // Update the user data in the parent component

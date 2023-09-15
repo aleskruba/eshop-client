@@ -34,7 +34,7 @@ function AdminUserChangePasswordComponent({cancelFunction,user,setUserView,setUs
       const url = `${baseUrl}/changepasswordADMIN`;
       const data = {
         newPassword: formData.password,
-        userID : user._id
+        userID : user._id ? user._id : user.id
       };
     
       const config = {
@@ -46,8 +46,7 @@ function AdminUserChangePasswordComponent({cancelFunction,user,setUserView,setUs
     
     
       const response = await axios.put(url, data, config);
-    
-   
+  
       if (response.status === 200) {
    
          setSuccess(response.data.message);
@@ -58,7 +57,7 @@ function AdminUserChangePasswordComponent({cancelFunction,user,setUserView,setUs
       }
     
     } catch (err) {
-
+        console.log(err)
       if (err.response.data = 'incorrect new password') {
           setBackendError("Incorrect new password");
           }

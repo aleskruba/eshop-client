@@ -98,7 +98,7 @@ function AdminUsers() {
 
       <div className={styles.results}>
       {initialUsersToShow.map((user) => (
-          <Link to={`../admin-users/${user._id}`} 
+          <Link to={`../admin-users/${user._id ? user._id : user.id}`} 
                 key={user._id ? user._id : user.id}
                 state={{userFromLink:user}}
                 > 
