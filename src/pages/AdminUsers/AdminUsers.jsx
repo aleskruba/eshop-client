@@ -1,22 +1,15 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './adminusers.module.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const baseUrl = import.meta.env.VITE_BASE_URL;
 
 function AdminUsers() {
-  const [allusers, setAllUsers] = useState([]);
+  const [allUsers, setAllUsers] = useState([]);
   const [query, setQuery] = useState('');
-
-  const filteredUsers = allusers?.filter(item=>{
-    if (item.lastName) {
-   return  (item.lastName).toLowerCase().includes(query.toLowerCase())
-    }
-    else {console.log('no last name')}
-  })
-
-  const initialUsersToShow = filteredUsers.slice(0, 2); // Display the first 5 users initially
-
+  const [searchField, setSearchField] = useState('email'); // Default search field
+  const [isLoading,setIsLoading] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,8 +17,8 @@ function AdminUsers() {
         const url = `${baseUrl}/getUsers`;
         const response = await axios.get(url, { withCredentials: true });
         setAllUsers(response.data.users);
-        console.log(response.data.users)
-      } catch (err) {
+        setIsLoading(false)
+        } catch (err) {
         console.log(err);
       }
     };
@@ -33,76 +26,103 @@ function AdminUsers() {
     fetchData();
   }, []);
 
-  const handleChangeByEmail = (e) => {
 
-  };
-
-  const handleChangeByName = (e) => {
+  const handleChange = (e) => {
     setQuery(e.target.value);
   };
 
-  const handleChangeByID = (e) => {
-
+  const handleSearchFieldChange = (field) => {
+    setSearchField(field);
   };
+
+  const filteredUsers = allUsers.filter((user) => {
+    if (query === '') {
+      return true; // No query, show all users
+    }
+    
+    if (searchField === 'email' && user.email.toLowerCase().includes(query.toLowerCase())) {
+      return true;
+    }
+    
+    if (searchField === 'lastName' && user.lastName.toLowerCase().includes(query.toLowerCase())) {
+      return true;
+    }
+  
+
+    if (user._id) {
+          if (searchField == 'id' && (user._id).toString().includes(query.toLowerCase())) {
+            return true;
+          }
+        } else  {
+          if (searchField == 'id' && user.id.includes(query.toLowerCase())) {
+            return true;
+          }
+
+        }
+
+
+    return false;
+  });
+
+  const initialUsersToShow = filteredUsers.slice(0, 2); // Display the first 5 users initially
 
 
   return (
     <div className={styles.container}>
+      {!isLoading ? <> 
       <div className={styles.top}>
         <h1 className={styles.topTitle}>Users</h1>
       </div>
-
       <div className={styles.searchBar}>
         <div className={styles.searchField}>
-          <div>Search by Email</div>
-          <input
-           
-            type="search"
-            onChange={handleChangeByEmail}
-            className={styles.searchInput}
-          />
+          <div>Search by:</div>
+          <select value={searchField} onChange={(e) => handleSearchFieldChange(e.target.value)}>
+            <option value="email">Email</option>
+            <option value="lastName">Last Name</option>
+            <option value="id">ID</option>
+          </select>
         </div>
 
         <div className={styles.searchField}>
-          <div>Search by Last Name</div>
+          <div>Search</div>
           <input
-           value={query}
-             type="search"
-            onChange={handleChangeByName}
-            className={styles.searchInput}
-          />
-        </div>
-
-        <div className={styles.searchField}>
-          <div>Search by ID</div>
-          <input
+            value={query}
             type="search"
-            onChange={handleChangeByID}
+            onChange={handleChange}
             className={styles.searchInput}
           />
         </div>
       </div>
 
       <div className={styles.results}>
-     
-             {initialUsersToShow.map((user) => (<>
-          <div className={styles.filteredResults} key={user._id}>
+      {initialUsersToShow.map((user) => (
+          <Link to={`../admin-users/${user._id}`} 
+                key={user._id ? user._id : user.id}
+                state={{userFromLink:user}}
+                > 
+          <div className={styles.filteredResults} >
             <div className={styles.searchField1}>{user.email}</div>
             <div className={styles.searchField2}>{user.lastName}</div>
             <div className={styles.searchField3}>{user._id}</div>
           </div>
-                   </>
+        </Link>           
         ))}
         {filteredUsers && filteredUsers.length > 2 && (
           <div className={styles.filteredResults}>
             <div className={styles.searchField1}></div>
             <div className={styles.searchField2}> 
-                <span className={styles.nextUsers}>... next {allusers.length-2} { allusers.length-2 > 1 ? 'users':'user'} </span></div>
+                <span className={styles.nextUsers}>... next {allUsers.length-2} { allUsers.length-2 > 1 ? 'users':'user'} </span></div>
             <div className={styles.searchField3}></div>
           </div>
         )}
-    
+
+        {filteredUsers.length === 0 && (
+          <div className={styles.filteredResults}>
+            <div className={styles.noResults}>No matching users found.</div>
+          </div>
+        )}
       </div>
+      </> : <p>wait a second ...</p>}
     </div>
   );
 }

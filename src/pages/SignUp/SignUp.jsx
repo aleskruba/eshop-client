@@ -40,7 +40,7 @@ const handleFormSubmit = async (values) => {
     confirmPassword: confirmPassword,
   };
 
-  console.log('Form Data:', formData);
+
 
   try {
     const url = `${baseUrl}/signup`;
