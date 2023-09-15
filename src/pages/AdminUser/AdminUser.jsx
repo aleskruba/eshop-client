@@ -9,7 +9,6 @@ import axios from 'axios';
 
 function AdminUser() {
 
-   
     const [userView,setUserView] = useState(true)
     const [userUpdate,setUserUpdate] = useState(false)
     const [userChangePassword,setUserChangePassword] = useState(false)
@@ -91,17 +90,21 @@ function AdminUser() {
 
             {userUpdate ? 
                <AdmiUserUpdateProfileComponent cancelFunction={cancelFunction}
-                                                userID={user}
+                                            //    userID={user}
                                                 setUserView={setUserView}
                                                 setUserUpdate={setUserUpdate}
                                                 setUpdatedUser={setUpdatedUser} 
-                                                updatedUser={updatedUser}// Pass the function here
+                                                updatedUser={updatedUser}
+                                                user={user}
+                                                setUser={setUser}// Pass the function here
                                                 />
             : null}
 
             {userChangePassword ? 
                <AdminUserChangePasswordComponent cancelFunction={cancelFunction}
                                                  user={user}
+                                                 setUserView={setUserView}
+                                                 setUserChangePassword={setUserChangePassword}
                                                   />
             : null}
 

@@ -1,46 +1,12 @@
 import React,{useEffect,useState} from 'react'
 import styles from './adminuserviewcomponent.module.css';
-const baseUrl = import.meta.env.VITE_BASE_URL;
-import axios from 'axios';
 
-function AdminUserViewComponent({updateProfile,changePassword,backFunction,updatedUser,userFromLink}) {
 
-    const [user,setUser] = useState(null)
-    const [isLoading,setIsLoading] = useState(true)
+function AdminUserViewComponent({updateProfile,changePassword,backFunction,user}) {
 
-    useEffect(()=>{
-        const fetchData =  async () => {
-        try {
-          const url = `${baseUrl}/getuserADMIN`;
-    
-          const params = {
-            id: userFromLink,
-          };
-    
-          const config = {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          params,
-          withCredentials: true, // Set the withCredentials option to true
-        };
-    
-    
-        const response = await axios.get(url, config);
-        setUser(response.data.user);
-        setIsLoading(false)
-    
-        }catch(err)
-          {console.log(err)}
-      }
-    
-      fetchData()
-      },[updatedUser])
-  
-
-    
+     
   return (
-    <>      {!isLoading ? <>
+   <>
            <div className={styles.box}>
                 <div>email:</div> <div>{user?.email}</div>
             </div>
@@ -74,9 +40,7 @@ function AdminUserViewComponent({updateProfile,changePassword,backFunction,updat
                 <button className={styles.changePassword} onClick={()=>changePassword()}>change password</button>
                 <button className={styles.cancelBtn} onClick={backFunction}>back to users</button>
             </div>
-          </>  : <p> wait a second ..</p>}
-
-    </>
+     </>
   )
 }
 

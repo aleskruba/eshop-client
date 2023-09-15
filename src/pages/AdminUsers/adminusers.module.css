@@ -77,6 +77,23 @@
     font-size: 11px;
     font-style: italic;
 }
+
+.backBtn{
+    margin-top: 20px;
+    width: 120px;
+    height: 25px;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+}
+
+.backBtn:hover{
+
+    background-color: lightgray;
+    color: black;
+}
+
+
 @media (max-width:768px){
 
 

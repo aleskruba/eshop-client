@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './adminusers.module.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 const baseUrl = import.meta.env.VITE_BASE_URL;
 
@@ -10,6 +10,8 @@ function AdminUsers() {
   const [query, setQuery] = useState('');
   const [searchField, setSearchField] = useState('email'); // Default search field
   const [isLoading,setIsLoading] = useState(true)
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -123,6 +125,8 @@ function AdminUsers() {
         )}
       </div>
       </> : <p>wait a second ...</p>}
+    
+    <button onClick={()=>{navigate('../admin')}} className={styles.backBtn}>Back</button>
     </div>
   );
 }

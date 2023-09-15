@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import styles from './adminuserupdateprofilecomponent.module.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -19,46 +19,18 @@ const ProfileSchema = Yup.object().shape({
   vat: Yup.string(), // Allows empty or any input
 });
 
-function AdmiUserUpdateProfileComponent({cancelFunction,userID,setUserView,setUserUpdate,setUpdatedUser,updatedUser}) {
+function AdmiUserUpdateProfileComponent({cancelFunction,
+                                         setUserView,
+                                         setUserUpdate,
+                                         setUpdatedUser,
+                                         updatedUser,
+                                         user,setUser}) {
 
-  const idToFetch = userID._id ? userID._id : userID.id
-
-  const [user,setUser] = useState(null)
+  const idToFetch = user._id ? user._id : user.id
+  
   const [backendError,setBackendError] = useState(null)
   const [success,setSuccess] = useState(null)
-  const [isLoading,setIsLoading] = useState(true)
-
-
-  useEffect(()=>{
-
-    const fetchData =  async () => {
-    try {
-
-      const url = `${baseUrl}/getuserADMIN`;
-
-      const params = {
-        id: idToFetch,
-      };
-
-      const config = {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      params,
-      withCredentials: true, // Set the withCredentials option to true
-    };
-
-    const response = await axios.get(url, config);
-    setUser(response.data.user);
-    setIsLoading(false)
-
-    }catch(err)
-      {console.log(err)}
-  }
-
-  fetchData()
-  },[updatedUser])
-
+  
   const handleFormSubmit = async (values) => {
 
     const changedFields = {}
@@ -68,16 +40,12 @@ function AdmiUserUpdateProfileComponent({cancelFunction,userID,setUserView,setUs
         changedFields[key] = values[key];
       }
     }
-
-
     try {
       const url = `${baseUrl}/updateuserADMIN`;
       const data = {
         data: changedFields,
         userID: idToFetch, // Include userID in the request data
       };
-
-
 
       const config = {
         headers: {
@@ -105,8 +73,7 @@ function AdmiUserUpdateProfileComponent({cancelFunction,userID,setUserView,setUs
 
   return (
     <>
-      {!isLoading ? (
-    <div className={styles.mainDiv}>
+     <div className={styles.mainDiv}>
        {user && ( 
       <Formik
         initialValues={{
@@ -124,7 +91,6 @@ function AdmiUserUpdateProfileComponent({cancelFunction,userID,setUserView,setUs
       >
         <Form>
           <h3 className={styles.signupFormH3}>Update Profile</h3>
-
           <div className={styles.formGroup}>
            <Field
               type="email"
@@ -140,7 +106,6 @@ function AdmiUserUpdateProfileComponent({cancelFunction,userID,setUserView,setUs
               className={styles.inputBoxError}
             />
           </div>
-
           <div className={styles.formGroup}>
             <Field
               type="text"
@@ -155,7 +120,6 @@ function AdmiUserUpdateProfileComponent({cancelFunction,userID,setUserView,setUs
               className={styles.inputBoxError}
             />
           </div>
-
           <div className={styles.formGroup}>
             <Field
               type="text"
@@ -185,7 +149,6 @@ function AdmiUserUpdateProfileComponent({cancelFunction,userID,setUserView,setUs
               className={styles.inputBoxError}
             />
           </div>
-
           <div className={styles.formGroup}>
             <Field
               type="text"
@@ -261,9 +224,7 @@ function AdmiUserUpdateProfileComponent({cancelFunction,userID,setUserView,setUs
       )}
     </div>
 
-) : (
-  <p>Wait a second...</p>
-)}
+
 </>
   );
 }
