@@ -11,7 +11,7 @@ import Summary from './pages/Summary/Summary';
 import Order from './pages/Order/Order';
 import PrintInvoice from './pages/PrintInvoice/PrintInvoice';
 import { RequireAuth } from './components/RequireAuth.jsx/RequireAuth';
-import Page404 from './pages/page404/page404';
+import Page404 from './pages/Page404/Page404';
 import PrintInvoiceLayout from './pages/Layout/PrintInvoiceLayout';
 import Admin from './pages/Admin/Admin';
 import { RequireAuthAmin } from './components/RequireAuth.jsx/RequiereAdminAuth';
