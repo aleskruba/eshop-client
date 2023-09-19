@@ -49,7 +49,7 @@ function SearchingComponent() {
       >
 
         {filteredProducts && filteredProducts.map((product,index)=>( 
-                <SwiperSlide key={product.id}>
+                <SwiperSlide key={index}>
                 <div className={styles.box}>
                     <h3>{product.name}</h3>
                       <div className={styles.BoxImageDiv}>

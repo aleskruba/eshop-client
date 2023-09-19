@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Sonsie+One&display=swap');
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.mainDIV{
+    margin-top: 20px;
+    width: 700px;
+   
+}

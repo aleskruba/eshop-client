@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './adminusers.module.css';
 import axios from 'axios';
 import { Link,useNavigate } from 'react-router-dom';
@@ -50,23 +50,23 @@ function AdminUsers() {
       return true;
     }
   
-
+//mongo
     if (user._id) {
-          if (searchField == 'id' && (user._id).toString().includes(query.toLowerCase())) {
+          if (searchField === 'id' && (user._id).toString().includes(query.toLowerCase())) {
             return true;
           }
-        } else  {
-          if (searchField == 'id' && user.id.includes(query.toLowerCase())) {
+        } 
+  //sql
+    if (user.id) {
+          if (searchField === 'id' && (user.id).toString().includes(query.toLowerCase())) {
             return true;
           }
-
-        }
-
+        }   
 
     return false;
   });
 
-  const initialUsersToShow = filteredUsers.slice(0, 2); // Display the first 5 users initially
+  const initialUsersToShow = filteredUsers.slice(0, 5); // Display the first 5 users initially
 
 
   return (
@@ -113,7 +113,7 @@ function AdminUsers() {
           <div className={styles.filteredResults}>
             <div className={styles.searchField1}></div>
             <div className={styles.searchField2}> 
-                <span className={styles.nextUsers}>... next {allUsers.length-2} { allUsers.length-2 > 1 ? 'users':'user'} </span></div>
+                <span className={styles.nextUsers}>... next {allUsers.length-5} { allUsers.length-5 > 1 ? 'users':'user'} </span></div>
             <div className={styles.searchField3}></div>
           </div>
         )}

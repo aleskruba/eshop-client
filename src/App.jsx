@@ -18,6 +18,8 @@ import { RequireAuthAmin } from './components/RequireAuth.jsx/RequiereAdminAuth'
 import AdminUsers from './pages/AdminUsers/AdminUsers';
 import AdminProducts from './pages/AdminProducts/AdminProducts';
 import AdminUser from './pages/AdminUser/AdminUser';
+import AdminProduct from './pages/AdminProduct/AdminProduct';
+import AdminNewProduct from './components/AdminProductComponent/AdminNewProduct';
 
 function App() {
 
@@ -53,6 +55,8 @@ function App() {
                 <Route path="/admin-users"  element={<AdminUsers/>}/> 
                 <Route path="/admin-users/:id"  element={<AdminUser/>}/> 
                 <Route path="/admin-products"  element={<AdminProducts/>}/> 
+                <Route path="/admin-products/:id"  element={<AdminProduct/>}/> 
+                <Route path="/admin-newproduct"  element={<AdminNewProduct/>}/> 
             </Route>
           </Route>
     </Routes>

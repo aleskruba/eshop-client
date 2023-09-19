@@ -19,7 +19,7 @@ function Home() {
   <div className={menuBasket || menuLogin || menuSignUp || summaryWindow ? styles.homeMainDiv : null}>
 
  
-    <div>
+    <div id='home'>
 
     {isSearching  ? 
        <div  id='search'>
