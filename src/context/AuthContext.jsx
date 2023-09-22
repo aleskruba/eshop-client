@@ -32,6 +32,8 @@ export function AuthProvider(props) {
     const [selfPickUp,setSelfPickUp] = useState(false)
     const [orderState,setOrdersState] = useState(false)
     const [updateReview,setUpdateReview] = useState(false)
+    const [fetchedComments,setFetchedComments] = useState([])
+    const [selectedStars, setSelectedStars] = useState(5); 
       const shipmentCost = 10
 
     let loginBtnRef = useRef() 
@@ -82,9 +84,9 @@ export function AuthProvider(props) {
 
 
     useEffect(() => {
-      const fetchData = async () => {
+      const fetchProductsData = async () => {
         try {
-          const response = await axios.get(`${baseUrl}/getProducts`);
+          const response = await axios.get(`${baseUrl}/getproducts`);
           setProducts(response.data.products);
           setIsLoading(false);
         } catch (err) {
@@ -93,9 +95,24 @@ export function AuthProvider(props) {
         }
       };
   
-      fetchData();
+      fetchProductsData();
     }, []);
-    
+  
+    // Fetch messages data when selectedStars or updateReview changes
+    useEffect(() => {
+      const fetchMessagesData = async () => {
+        try {
+          const url = `${baseUrl}/getmessages`;
+          const response = await axios.get(url, { withCredentials: true });
+          setFetchedComments(response.data.comments);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+  
+      fetchMessagesData();
+    }, [selectedStars, updateReview]);
+
    
 
         const addToBasketFunction = (ID) => {
@@ -216,7 +233,7 @@ const value = {
     setOrders,
     shipmentCost,
     orderState,setOrdersState,
-    setUpdateReview,updateReview
+    setUpdateReview,updateReview,fetchedComments,setSelectedStars,selectedStars
 
   
 

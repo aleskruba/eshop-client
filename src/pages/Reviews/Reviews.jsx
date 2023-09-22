@@ -17,26 +17,10 @@ import { AuthContext } from '../../context/AuthContext';
 
 function Reviews() {
 
-  const [fetchedComments,setFetchedComments] = useState([])
-  const [selectedStars, setSelectedStars] = useState(5); 
-  const {updateReview} = useContext(AuthContext)
 
-  useEffect(()=>{
-    const fetchData = async () => {
-      try {
-          const url = `${baseUrl}/getmessages`;
-          const response = await axios.get(url,{ withCredentials: true });
-          setFetchedComments(response.data.comments)
-     
+  const {updateReview,fetchedComments,setSelectedStars,selectedStars} = useContext(AuthContext)
 
-      } catch (err) {
-          console.log(err);
-      }
-  };
-
-  fetchData()
-  },[selectedStars,updateReview])
-
+ 
 
   return (
 
