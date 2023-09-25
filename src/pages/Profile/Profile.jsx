@@ -56,8 +56,7 @@ const ProfileSchema = Yup.object().shape({
 
     const handleFormSubmit = async (values) => {
       const updatedUser = { ...user, ...values };
-      console.log(updatedUser);
-    
+      
       // Update the user state with the merged object
       setUser(updatedUser);
 

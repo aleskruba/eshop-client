@@ -12,7 +12,6 @@ function PrintInvoice() {
   const { auth,shipment} = useAuth();
   const {user} = useContext(AuthContext)
 
-  console.log(user)
 
   const { orderData, totalPrice } = location.state || {};
 
