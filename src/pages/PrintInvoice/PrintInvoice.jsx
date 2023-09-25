@@ -1,14 +1,18 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import moment from 'moment';
 import styles from './PrintInvoice.module.css'; // Import your CSS styles for the invoice
 import {  useLocation} from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import { AuthContext } from '../../context/AuthContext';
 
 function PrintInvoice() {
 
   const location = useLocation();
 
   const { auth,shipment} = useAuth();
+  const {user} = useContext(AuthContext)
+
+  console.log(user)
 
   const { orderData, totalPrice } = location.state || {};
 
@@ -37,12 +41,12 @@ function PrintInvoice() {
       <div>Customer</div>
       <div className={styles.customerDetails}>
            <div>{auth.user?.email}</div>
-          <div>{auth.user?.firstName}  {auth.user?.lastName}</div>
-          <div>{auth.user?.companyName}</div>
-          <div>{auth.user?.street}</div>
-          <div>{auth.user?.zipCode}</div>
-          <div>{auth.user?.city}</div>
-          <div>{auth.user?.vat}</div>
+          <div>{user.lastName ? user.lastName : auth.user?.lastName} </div>
+          <div>{user.companyName ? user.lastName : auth.user?.lastName} </div>
+          <div>{user.street ? user.street : auth.user?.street} </div>
+          <div>{user.zipCode ? user.zipCode : auth.user?.zipCode} </div>
+          <div>{user.city ? user.city : auth.user?.city} </div>
+          <div>{user.vat ? user.vat : auth.user?.vat} </div>
         </div>
       </div>
    </div>

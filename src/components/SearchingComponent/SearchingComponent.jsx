@@ -65,7 +65,7 @@ function SearchingComponent() {
                             <i className='fas fa-star-half-alt'></i>
                       </div>
                       <div onClick={()=>addToBasketFunction(product.id)} className={styles.btn}>add to cart</div>
-                      <Link to={`products/${product.id}`} className={styles.btn} >read more</Link>
+                      <Link to={`products/${product._id}`} className={styles.btn} >read more</Link>
                       
                       {product.title.length > 40 ? (
                         <h3 className={styles.BoxH3}>{product.title.slice(0, 100)}...</h3>

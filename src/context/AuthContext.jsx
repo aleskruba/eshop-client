@@ -34,7 +34,9 @@ export function AuthProvider(props) {
     const [updateReview,setUpdateReview] = useState(false)
     const [fetchedComments,setFetchedComments] = useState([])
     const [selectedStars, setSelectedStars] = useState(5); 
-      const shipmentCost = 10
+    const [user,setUser] = useState(null)
+    
+    const shipmentCost = 10
 
     let loginBtnRef = useRef() 
     let loginBtnDivRef = useRef() 
@@ -43,6 +45,7 @@ export function AuthProvider(props) {
     
   
     useEffect(() => {
+    
       const checkAuthentication = () => {
         if (auth.user) {
           setIsLoggedIn(true);
@@ -70,8 +73,10 @@ export function AuthProvider(props) {
                 refreshToken: responseData.refreshToken,
               },
             });
+            setUser(responseData.user)
           } else {
             setAuth({ user: null, tokens: null });
+            setUser(null)
           }
         } catch (err) {
           console.log('Error fetching user data:', err);
@@ -233,10 +238,8 @@ const value = {
     setOrders,
     shipmentCost,
     orderState,setOrdersState,
-    setUpdateReview,updateReview,fetchedComments,setSelectedStars,selectedStars
-
-  
-
+    setUpdateReview,updateReview,fetchedComments,setSelectedStars,selectedStars,
+    user,setUser
 
 }
 

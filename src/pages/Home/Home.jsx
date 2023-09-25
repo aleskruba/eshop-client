@@ -30,20 +30,26 @@ function Home() {
     }
 
     </div>
-    <div  id='offer'>
-    <Offers/>
-    </div>
 
-    <div  id='phones'>
-    <Products />
-    </div>
-    <div id='reviews'>
-    <Reviews/>
-    </div>
-    <div>
-      <Footer/>
-    </div>
- 
+    {!(menuBasket || menuLogin || menuSignUp || summaryWindow) ?
+    
+    <> 
+                <div  id='offer'>
+                <Offers/>
+                </div>
+
+                <div  id='phones'>
+                <Products />
+                </div>
+                <div id='reviews'>
+                <Reviews/>
+                </div>
+                <div>
+                  <Footer/>
+                </div>
+                </>
+            : null }
+
    </div>
    
   )

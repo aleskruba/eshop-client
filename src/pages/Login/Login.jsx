@@ -17,7 +17,7 @@ const LoginSchema = Yup.object().shape({
 
 function Login() {
   const { isLoggedIn, menuLogin, setMenuLogin, setMenuProfile, setOrdersState, 
-    setMenuChangePassword,setMenuSignUp,auth,setMenuBasket,
+    setMenuChangePassword,setMenuSignUp,setUser,setMenuBasket,setOrders,
         setIsLoggedIn,setAuth,setMenuForgottenPassword} = useAuth();
 
         const [showForgottenPassword, setShowForgottenPassword] = useState(false);
@@ -92,7 +92,8 @@ function Login() {
 
 
   const logoutFunction = async () => {
-   
+    setUser(null)
+    setOrders(null)
     try {
         const url = `${baseUrl}/logout`;
         const config = {

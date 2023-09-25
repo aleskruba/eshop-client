@@ -118,11 +118,7 @@ const submitCodeFunction = async () => {
         const responseData = response.data;
         console.log(responseData.message)
             if (responseData.message === 'OTP verified successfully!') {
-  // Navigate to the resetpassword page if OTP is verified
-/*   navigate("/resetpassword", {
-    state: { email: emailSOS }, // Pass the email in the location state
-  });
- */  console.log('success')
+             console.log('success')
  setOptSuccess(true)
 } else {
   alert('Invalid OTP or session expired.');

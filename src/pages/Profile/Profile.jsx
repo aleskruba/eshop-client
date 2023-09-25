@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useAuth } from '../../context/AuthContext';
 import styles from './profile.module.css';
 const baseUrl = import.meta.env.VITE_BASE_URL;
 import axios from 'axios';
+import { AuthContext } from '../../context/AuthContext';
 
 
 
@@ -24,7 +25,8 @@ const ProfileSchema = Yup.object().shape({
   function Profile() {
 
     const { setMenuLogin} = useAuth()
-    const [user,setUser] = useState(null)
+    const {user,setUser} = useContext(AuthContext)
+
     const [backendError,setBackendError] = useState(null)
     const [success,setSuccess] = useState(null)
 
@@ -53,6 +55,11 @@ const ProfileSchema = Yup.object().shape({
     },[])
 
     const handleFormSubmit = async (values) => {
+      const updatedUser = { ...user, ...values };
+      console.log(updatedUser);
+    
+      // Update the user state with the merged object
+      setUser(updatedUser);
 
       const changedFields = {}
       for (const key in values) {

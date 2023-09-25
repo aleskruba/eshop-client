@@ -115,10 +115,10 @@ function Header() {
       setMenuOptions(false)
     }
     else {
-      setMenuLogin(!menuLogin)
       setMenuBtn(false)
-      setMenuBasket(false)
       setMenuOptions(false)
+      setMenuLogin(!menuLogin)
+      setMenuBasket(false)
     }
 
   }
@@ -126,7 +126,7 @@ function Header() {
 
   const loginFormFunction = () => {
     if (!menuSignUp) setMenuLogin(!menuLogin)
-    if (!menuLogin) setMenuSignUp(false)
+    if (!menuLogin) setMenuSignUp(false) 
     setMenuForgottenPassword(false)
     setMenuBtn(false)
     setMenuBasket(false)
@@ -136,11 +136,10 @@ function Header() {
   }
 
   const menuFormFunction = () => {
-    setMenuOptions(!menuOptions)
     setMenuBtn(false)
     setMenuBasket(false)
     setMenuLogin(false)
-
+    setMenuOptions(!menuOptions)
   }
 
    useEffect(() => {
@@ -240,7 +239,24 @@ function Header() {
 
   }
 
+  const [message, setMessage] = useState(null);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (isLoggedIn) {
+        if (auth.user?.admin) {
+          setMessage(`Hello ${auth.user?.firstName}`);
+        } else {
+          setMessage(`${auth.user?.email} is logged in`);
+        }
+      } else {
+        setMessage('No user');
+      }
+    }, 200);
+
+    // Clear the timer when the component unmounts or when dependencies change.
+    return () => clearTimeout(timer);
+  }, [isLoggedIn, auth]);
 
   return (<>
 
@@ -271,8 +287,7 @@ function Header() {
 
       <h2>
 
-        {isLoggedIn && auth.user?.admin ?
-          `Hello  ${auth.user?.firstName} ` : isLoggedIn && !auth.user?.admin ? `${auth.user?.email} is logged in` : 'No user'}
+   {message}
 
       </h2>
 
