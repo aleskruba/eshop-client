@@ -41,12 +41,12 @@ function PrintInvoice() {
       <div>Customer</div>
       <div className={styles.customerDetails}>
            <div>{auth.user?.email}</div>
-          <div>{user.lastName ? user?.lastName : auth.user?.lastName ? auth.user?.lastName  : null  } </div>
-          <div>{user.companyName ? user?.companyName : auth.user?.companyName ? auth.user?.companyName  : null} </div>
-          <div>{user.street ? user?.street : auth.user?.street ? auth.user?.street  : null} </div>
-          <div>{user.zipCode ? user?.zipCode : auth.user?.zipCode ? auth.user?.zipCode  : null} </div>
-          <div>{user.city ? user?.city : auth.user?.city ? auth.user?.city  : null} </div>
-          <div>{user.vat ? user?.vat : auth.user?.vat ? auth.user?.vat  : null} </div>
+          <div>{user?.lastName ? user?.lastName : auth.user?.lastName ? auth.user?.lastName  : null  } </div>
+          <div>{user?.companyName ? user?.companyName : auth.user?.companyName ? auth.user?.companyName  : null} </div>
+          <div>{user?.street ? user?.street : auth.user?.street ? auth.user?.street  : null} </div>
+          <div>{user?.zipCode ? user?.zipCode : auth.user?.zipCode ? auth.user?.zipCode  : null} </div>
+          <div>{user?.city ? user?.city : auth.user?.city ? auth.user?.city  : null} </div>
+          <div>{user?.vat ? user?.vat : auth.user?.vat ? auth.user?.vat  : null} </div>
         </div>
       </div>
    </div>
