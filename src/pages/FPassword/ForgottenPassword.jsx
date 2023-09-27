@@ -40,7 +40,7 @@ const [wrongOtp,setWrongOtp] = useState(false)
 const handleFormSubmit = async (values) => {
 
   setemailSOS(values.email)
-  console.log(values.email)
+
     
   try {
 
@@ -58,11 +58,11 @@ const handleFormSubmit = async (values) => {
 
     const response = await axios.post(url, data, config);
     const responseData = response.data;
-    console.log(responseData)
+
 
 
     if (responseData.status) {
-      console.log(responseData.status);
+  
       setEmail(values.email);
       setEmailSent(true)
      // values.email = ''; // Clear the email field directly
@@ -75,6 +75,8 @@ const handleFormSubmit = async (values) => {
     }   
   
   } catch (err) {
+    console.log(err)
+    console.log(err.response.status)
       if (err.response.status === 404);
        {setBackendError('This email is not registred')
   }
@@ -116,16 +118,14 @@ const submitCodeFunction = async () => {
 
         const response = await axios.post(url, data, config);
         const responseData = response.data;
-        console.log(responseData.message)
-            if (responseData.message === 'OTP verified successfully!') {
-             console.log('success')
+           if (responseData.message === 'OTP verified successfully!') {
+           
  setOptSuccess(true)
 } else {
   alert('Invalid OTP or session expired.');
 }
 } catch (error) {
   setWrongCode(true)
-  console.log(error.response.status)
   if (error.response.status === 401) {
       console.log('Invalid OTP or session expired.')
   }
@@ -158,10 +158,6 @@ const handleChangePassword = (e) => {
 
 const submitNewPasswordFunction = async () => {
 
-  console.log(newPassword.password )
-  console.log(newPassword.confirmPassword )
-  
-
   if (newPassword.password === newPassword.confirmPassword)  { 
 
     try {
@@ -180,7 +176,6 @@ const submitNewPasswordFunction = async () => {
 
           const response = await axios.post(url, data, config);
           if (response.status===200)  {
-                console.log('password changed succeshully') 
                 setSuccessChange(true)
                 setTimeout(()=>{setMenuLogin(false)},1500)  
               }
@@ -213,7 +208,7 @@ const submitNewPasswordFunction = async () => {
                 <button type="submit" className={styles.inputBox}>
                   Send
                 </button>
-                {backendError ? <p> this email is not registred </p> : null }
+                {backendError ? <p className={styles.error}> this email is not registred </p> : null }
               </>
          : <> {!otpSuccess ?
                     <>
